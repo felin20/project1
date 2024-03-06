@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<header>
+    {%include 'header.html'%}
+</header>
+<body>
+    <div class="image-container">
+    <img style="width: 200px;height: 200px;" src="{{det.image}}" alt="">
+</div>
+   <div class="wrapper">
+    <div class="content">
+    <p class="text1"> {{det.title}}</p>.
+    <p class="text2">{{det.description}}</p>
+    <p class="text3">Price:{{det.price}}$</p>
+   <p class="text4">Category:{{det.category}}</p>
+   <p class="text5">Rate:{{det.rate}}</p>
+   <p class="text6">Count:{{det.count}}</p>
+</div>
+</div>
+</body>
+<footer>
+ {%include 'footer.html'%}   
+</footer>
+<style>
+    
+    p{
+        position: relative;
+        top: 300px;
+    }
+    .wrapper {
+  position: relative;
+  min-height: 100vh; 
+  text-align: center;
+  top: -150px;
+}
+
+.content {
+  
+  padding-bottom: 200px; 
+}
+
+footer {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  height: 0px; 
+}
+.text1{
+
+    font-weight: 600;
+    font-size: x-large;
+}
+.text2,.text3,.text4,.text5,.text6{
+    font-size: larger;
+}
+.image-container {
+  text-align: center; 
+  position: relative;
+  top: 100px;
+}
+
+.image-container img {
+  display: block; 
+  margin: 0 auto; 
+  
+}
+
+</style>
+</html>

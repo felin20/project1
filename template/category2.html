@@ -1,0 +1,90 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<header>
+    {%include 'header.html'%}
+</header>
+<body>
+    <div class="container1">
+    {%for i in jewelery%}
+    
+    <div class="image-container">
+      
+    <img style="width: 200px;height: 200px;" src="{{i.image}}" alt="">
+</div>
+   <div class="wrapper">
+    <div class="content">
+    <p class="text1"> {{i.title}}</p>.
+    <p class="text2">{{i.description}}</p>
+    <p class="text3">Price:{{i.price}}$</p>
+   <p class="text4">Category:{{i.category}}</p>
+   <p class="text5">Rate:{{i.rate}}</p>
+   <p class="text6">Count:{{i.count}}</p>
+</div>
+   {%endfor%}
+   
+</div>
+</div>
+
+</body>
+<footer>
+ {%include 'footer.html'%}   
+</footer>
+<style>
+    
+    p{
+        position: relative;
+        top: 60px;
+    }
+    .wrapper {
+  position: relative;
+  min-height: 100vh; /* Ensure the wrapper covers at least the viewport height */
+  text-align: center;
+  top: -150px;
+}
+
+.content {
+  /* Styling for your content */
+  padding-bottom: 200px; /* Adjust this value to make space for the footer */
+  position: relative;
+  top: 200px;
+}
+
+footer {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  height: 0px; /* Adjust the height according to your footer height */
+}
+.text1{
+
+    font-weight: 600;
+    font-size: x-large;
+}
+.text2,.text3,.text4,.text5,.text6{
+    font-size: larger;
+}
+.text6{
+    border-bottom: 1px solid black;
+}
+.image-container {
+  text-align: center; /* Center-align the content within the container */
+  position: relative;
+  top: 100px;
+}
+
+.image-container img {
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin: 0 auto; /* Sets top and bottom margin to 0, and left and right margin to auto, thus centering the image horizontally */
+  
+}
+
+</style>
+</html>
