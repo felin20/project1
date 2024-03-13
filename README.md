@@ -1,0 +1,1 @@
+This a Website that derives data from an API and the data is displayed in the website.When the accessories are clicked,it takes the page to a detailed page describing the cost,category and rating of teh accessory.The Accessories ar further divided on the basis of the categories.
